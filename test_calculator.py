@@ -1,3 +1,4 @@
+#https://github.com/kgreen5-art/lab11
 import unittest
 from calculator import *
 
@@ -15,12 +16,17 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(sub(-6, -7), 1)
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(multiply(1,2),2)
+        self.assertEqual(multiply(-1, 2), -2)
+        self.assertEqual(multiply(-100, -2), 200)
     #     fill in code
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_divide(self): # 3 assertions
+        self.assertEqual(divide(2, 10), 5)
+        self.assertEqual(divide(2, 20), 10)
+        self.assertEqual(divide(-2, 20), -10)
+    ##########################
 
     ######## Partner 2
      def test_divide_by_zero(self): # 1 assertion
@@ -38,21 +44,27 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(ValueError, log(0co, 9))
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
+    def test_log_invalid_argument(self): # 1 assertion
+        with self.assertRaises(ValueError):
+            logarithm(-10, -10)
     #     # call log function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     logarithm(0, 5)
     #     fill in code
 
-    # def test_hypotenuse(self): # 3 assertions
+    import math
+    def test_hypotenuse(self): # 3 assertions
+        self.assertEqual(hypotenuse(-4,-9), math.hypot(-4,-9))
+        self.assertEqual(hypotenuse(1,4), math.hypot(1, 4))
+        self.assertEqual(hypotenuse(-182,929), math.hypot(-182,929))
     #     fill in code
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        with self.assertRaises(ValueError):
+            square_root(-1000)
+        with self.assertRaises(ValueError):
+            square_root(-100)
+        self.assertEqual(2, square_root(4))
     ##########################
 
 # Do not touch this
