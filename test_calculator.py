@@ -1,4 +1,6 @@
 #https://github.com/kgreen5-art/lab11
+#Partner 1: Kaesi Green
+# Partner 2: Kai West
 import unittest
 from calculator import *
 
