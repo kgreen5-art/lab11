@@ -1,3 +1,4 @@
+#https://github.com/kgreen5-art/lab11
 import unittest
 from calculator import *
 
@@ -47,18 +48,17 @@ class TestCalculator(unittest.TestCase):
     #     #     logarithm(0, 5)
     #     fill in code
 
+    import math
     def test_hypotenuse(self): # 3 assertions
-        self.assertEqual(hypotenuse(1,4), 5)
-        self.assertEqual(divide(2, 10), 5)
-        self.assertEqual(divide(2, 10), 5)
+        self.assertEqual(hypotenuse(-4,-9), math.hypot(-4,-9))
+        self.assertEqual(hypotenuse(1,4), math.hypot(1, 4))
+        self.assertEqual(hypotenuse(-182,929), math.hypot(-182,929))
     #     fill in code
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        self.assertRaises(ValueError, square_root(-1000))
+        self.assertRaises(ValueError, square_root(-100))
+        self.assertEqual(2, square_root(4))
     ##########################
 
 # Do not touch this
