@@ -1,9 +1,6 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
+#https://github.com/kgreen5-art/lab11
+#Partner 1: Kaesi Green
+# Partner 2: Kai West
 # First example
 import math
 def add(a, b):
