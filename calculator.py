@@ -30,9 +30,9 @@ def divide(a, b):
     return b / a
 
 def logarithm(a, b):
-    if b < 0:
-        raise ValueError
     return math.log(b, a)# use math library/raise ValueError
 
 def exponent(a, b):
     return a**b
+
+print(square_root(-100))

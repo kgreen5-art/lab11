@@ -41,8 +41,7 @@ class TestCalculator(unittest.TestCase):
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
-        if logarithm(1, -1):
-            self.assertRaises(ValueError, logarithm(9, -10))
+        self.assertRaises(logarithm(-10, -10), ValueError)
     #     # call log function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     logarithm(0, 5)
