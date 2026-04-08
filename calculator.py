@@ -34,5 +34,3 @@ def logarithm(a, b):
 
 def exponent(a, b):
     return a**b
-
-print(square_root(-100))
