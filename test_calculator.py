@@ -12,28 +12,28 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-6, -7), -13)
 
      def test_subtract(self): # 3 assertions
-        self.assertEqual(subtract(4,2), 2)
-        self.assertEqual(subtract(2, 8), -6)
-        self.assertEqual(subtract(-4, 7), -11)
-        self.assertEqual(subtract(-6, -7), 1)
+        self.assertEqual(sub(4,2), 2)
+        self.assertEqual(sub(2, 8), -6)
+        self.assertEqual(sub(-4, 7), -11)
+        self.assertEqual(sub(-6, -7), 1)
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        self.assertEqual(multiply(1,2),2)
-        self.assertEqual(multiply(-1, 2), -2)
-        self.assertEqual(multiply(-100, -2), 200)
+        self.assertEqual(mul(1,2),2)
+        self.assertEqual(mul(-1, 2), -2)
+        self.assertEqual(mul(-100, -2), 200)
     #     fill in code
 
     def test_divide(self): # 3 assertions
-        self.assertEqual(divide(2, 10), 5)
-        self.assertEqual(divide(2, 20), 10)
-        self.assertEqual(divide(-2, 20), -10)
+        self.assertEqual(div(2, 10), 5)
+        self.assertEqual(div(2, 20), 10)
+        self.assertEqual(div(-2, 20), -10)
     ##########################
 
     ######## Partner 2
      def test_divide_by_zero(self): # 1 assertion
-        self.assertRaises(ZeroDivisionError, divide(3, 0))
-        self.assertRaises(ZeroDivisionError, divide(10, 0))
+        self.assertRaises(ZeroDivisionError, div(3, 0))
+        self.assertRaises(ZeroDivisionError, div(10, 0))
 
 
      def test_logarithm(self): # 3 assertions
